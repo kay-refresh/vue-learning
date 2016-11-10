@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>命名试图</title>
+    <link rel="stylesheet" href="css/base-all.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <!--同时（同级）展示多个视图-->
 <div id="app">
-    <h1>Hello App!</h1>
+    <h1 v-on:click="show = !show">Hello App!</h1>
         <!-- 使用 router-link 组件来导航. -->
         <!-- 通过传入 `to` 属性指定链接. -->
         <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
-    <ul>
+         <transition name="slide-fade">
+    <ul class="slideBar" v-if="show">
         <li>
             <router-link to="/">Go to Foo</router-link>
         </li>
@@ -19,6 +22,7 @@
             <router-link to="/namedView">Go to Bar</router-link>
         </li>
     </ul>
+    </transition>
     <ul>
         <li>
             <transition >

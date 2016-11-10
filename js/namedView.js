@@ -3,12 +3,18 @@
  */
 
 
-const one = { template: '<div>one</div>'  }
-const two = { template: '<div>two</div>'  }
-const three = { template: '<div>three</div>'  }
+const one = {
+    template: '<div>one</div>'
+}
+const two = {
+    template: '<div>two</div>'
+}
+const three = {
+    template: '<div>three</div>'
+}
 
 const router = new VueRouter({
-    routes:[
+    routes: [
         {
             path: '/',
             components: {
@@ -26,8 +32,7 @@ const router = new VueRouter({
                 three: one
             }
         }
-    ]
-    ,
+    ],
     watch: {
         '$route' (to, from) {
             const toDepth = to.path.split('/').length
@@ -39,5 +44,9 @@ const router = new VueRouter({
 
 new Vue({
     router,
-    el: '#app'
+    el: '#app',
+        data: {
+            show: false
+        }
+    // 设定是否显示，设置不显示
 })
