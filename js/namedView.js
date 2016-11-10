@@ -3,15 +3,9 @@
  */
 
 
-const one = {
-    template: '<div>one</div>'
-}
-const two = {
-    template: '<div>two</div>'
-}
-const three = {
-    template: '<div>three</div>'
-}
+const one = {template: '<div>one</div>'}
+const two = {template: '<div>two</div>'}
+const three = {template: '<div>three</div>'}
 
 const router = new VueRouter({
     routes: [
@@ -41,7 +35,6 @@ const router = new VueRouter({
         }
     }
 })
-
 new Vue({
     router,
     el: '#app',
